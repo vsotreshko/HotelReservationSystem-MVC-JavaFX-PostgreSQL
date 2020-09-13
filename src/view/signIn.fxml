@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="370.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignInController">
+   <children>
+      <Button fx:id="confirmButton" layoutX="198.0" layoutY="259.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="100.0" text="Confirm">
+         <font>
+            <Font name="Ubuntu" size="15.0" />
+         </font></Button>
+      <Text layoutX="103.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="196.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Signing in">
+         <font>
+            <Font name="Ubuntu Bold" size="23.0" />
+         </font>
+      </Text>
+      <Text layoutX="103.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="login" layoutX="217.0" layoutY="139.0" />
+      <PasswordField fx:id="password" layoutX="217.0" layoutY="180.0" />
+      <Label fx:id="errorLabel" contentDisplay="CENTER" layoutX="130.0" layoutY="329.0" prefHeight="27.0" prefWidth="253.0" textAlignment="CENTER" textFill="RED" />
+      <Button layoutX="41.0" layoutY="318.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StartController">
+   <children>
+      <ImageView fitHeight="411.0" fitWidth="626.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../pictures/hotel.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="signIn" layoutX="358.0" layoutY="186.0" mnemonicParsing="false" onAction="#onSignIn" opacity="0.75" prefHeight="40.0" prefWidth="100.0" text="Sign in">
+         <font>
+            <Font name="Ubuntu" size="15.0" />
+         </font></Button>
+      <Button fx:id="signUp" alignment="CENTER" layoutX="158.0" layoutY="186.0" mnemonicParsing="false" onAction="#onSignUp" opacity="0.75" prefHeight="40.0" prefWidth="100.0" text="Sign up">
+         <font>
+            <Font name="Ubuntu" size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

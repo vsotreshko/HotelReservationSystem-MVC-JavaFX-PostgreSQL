@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="495.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MakeReservationController">
+   <center>
+      <TabPane fx:id="resTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="selectHotelTab" text="Select Hotel">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="80.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country" wrappingWidth="143.3525390625">
+                           <font>
+                              <Font name="Ubuntu Light" size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="80.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start date" wrappingWidth="143.3525390625">
+                           <font>
+                              <Font name="Ubuntu Light" size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="80.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End date" wrappingWidth="143.3525390625">
+                           <font>
+                              <Font name="Ubuntu Light" size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="115.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose hotel" textAlignment="RIGHT" wrappingWidth="303.3525390625">
+                           <font>
+                              <Font name="Ubuntu Bold" size="27.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="makeResButton" layoutX="315.0" layoutY="419.0" mnemonicParsing="false" onAction="#makeReservation" text="Make a reservation">
+                           <font>
+                              <Font name="Ubuntu" size="17.0" />
+                           </font>
+                        </Button>
+                        <Text layoutX="115.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose room class" textAlignment="RIGHT" wrappingWidth="303.3525390625">
+                           <font>
+                              <Font name="Ubuntu Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <Group fx:id="radioGroup">
+                           <children>
+                              <RadioButton fx:id="economRadio" layoutX="80.0" layoutY="220.0" mnemonicParsing="false" text="Econom">
+                                 <font>
+                                    <Font name="Ubuntu Light" size="17.0" />
+                                 </font>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Class" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="standartRadio" layoutX="218.0" layoutY="220.0" mnemonicParsing="false" text="Standart" toggleGroup="$Class">
+                                 <font>
+                                    <Font name="Ubuntu Light" size="17.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="luxRadio" layoutX="360.0" layoutY="220.0" mnemonicParsing="false" text="Lux" toggleGroup="$Class">
+                                 <font>
+                                    <Font name="Ubuntu Light" size="17.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </Group>
+                        <Text layoutX="115.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose dates" textAlignment="RIGHT" wrappingWidth="303.3525390625">
+                           <font>
+                              <Font name="Ubuntu Bold" size="24.0" />
+                           </font>
+                        </Text>
+                        <DatePicker fx:id="DateFrom" layoutX="223.0" layoutY="307.0" />
+                        <DatePicker fx:id="DateTill" layoutX="223.0" layoutY="339.0" />
+                        <Text layoutX="80.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" wrappingWidth="143.3525390625">
+                           <font>
+                              <Font name="Ubuntu Light" size="17.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="80.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel name" wrappingWidth="143.3525390625">
+                           <font>
+                              <Font name="Ubuntu Light" size="17.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="222.0" layoutY="268.0" prefHeight="25.0" prefWidth="200.0" />
+                        <ComboBox fx:id="countryBox" layoutX="221.0" layoutY="55.0" onAction="#countrySelected" prefHeight="26.0" prefWidth="200.0" />
+                        <ComboBox fx:id="cityBox" layoutX="221.0" layoutY="86.0" onAction="#citySelected" prefHeight="26.0" prefWidth="200.0" />
+                        <ComboBox fx:id="hotelBox" layoutX="222.0" layoutY="118.0" prefHeight="26.0" prefWidth="200.0" />
+                        <Button fx:id="cancelButton" layoutX="14.0" layoutY="421.0" mnemonicParsing="false" onAction="#cancelMakingReservation" text="Back">
+                           <font>
+                              <Font name="Ubuntu" size="15.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="errorLabel" layoutX="149.0" layoutY="398.0" prefHeight="15.0" prefWidth="216.0" textFill="#ff0707" />
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

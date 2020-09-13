@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+   <children>
+      <TextField fx:id="login" layoutX="291.0" layoutY="105.0" />
+      <PasswordField fx:id="password" layoutX="293.0" layoutY="141.0" />
+      <TextField fx:id="firstName" layoutX="293.0" layoutY="172.0" />
+      <TextField fx:id="lastName" layoutX="293.0" layoutY="203.0" />
+      <DatePicker fx:id="dateofBirth" layoutX="293.0" layoutY="235.0" prefWidth="197.0" />
+      <Text layoutX="149.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="109.3525390625">
+         <font>
+            <Font name="Ubuntu" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="149.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of birth" wrappingWidth="143.3525390625">
+         <font>
+            <Font name="Ubuntu" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="149.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last name" wrappingWidth="143.3525390625">
+         <font>
+            <Font name="Ubuntu" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="149.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First name" wrappingWidth="143.3525390625">
+         <font>
+            <Font name="Ubuntu" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="149.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="109.3525390625">
+         <font>
+            <Font name="Ubuntu" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="220.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Signing Up" textAlignment="CENTER" wrappingWidth="159.3525390625">
+         <font>
+            <Font name="Ubuntu Bold" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="confirm" layoutX="243.0" layoutY="294.0" mnemonicParsing="false" onAction="#confirmAction" prefHeight="26.0" prefWidth="100.0" text="Confirm">
+         <font>
+            <Font name="Ubuntu" size="15.0" />
+         </font></Button>
+      <Button fx:id="backButton" layoutX="14.0" layoutY="360.0" mnemonicParsing="false" onAction="#backOn" prefHeight="27.0" prefWidth="63.0" text="Back">
+         <font>
+            <Font name="Ubuntu" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
